@@ -4,10 +4,9 @@
 
 Instalar Selenium:
 
-´´´ 
+```
 pip3 install selenium
-´´´
-
+```
 
 
 # Hito II
