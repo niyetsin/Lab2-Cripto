@@ -14,7 +14,7 @@ import random
 import requests
 
 mail = requests.get("https://www.1secmail.com/api/v1/?action=genRandomMailbox&count=1")
-print(mail.json())
+
 
 def random_mail():
 	letras = string.ascii_lowercase
@@ -38,7 +38,11 @@ driver.maximize_window()
 ua = UserAgent()
 userAgent = ua.random
 options.add_argument(f'user-agent={userAgent}')
-
+nombre = random_name()
+passes = random_pass()
+print(nombre)
+print(passes)
+print(mail.json()[0])
 
 driver.get("http://ediciones.ucsh.cl/index.php/ForoEducacional/user/register")
 time.sleep(3)
@@ -46,11 +50,11 @@ time.sleep(3)
 
 time.sleep(1)
 barra_usuario = WebDriverWait(driver,30).until(EC.presence_of_element_located((By.NAME, "givenName")))
-barra_usuario.send_keys(random_name())
+barra_usuario.send_keys(nombre)
 
 time.sleep(1)
 barra_afilation = WebDriverWait(driver,20).until(EC.presence_of_element_located((By.NAME, "affiliation")))
-barra_afilation.send_keys(random_name())
+barra_afilation.send_keys(nombre)
 
 time.sleep(1)
 select_element = driver.find_element(By.ID,'country')
@@ -63,9 +67,9 @@ barra_mail.send_keys(mail.json()[0])
 
 time.sleep(1)
 barra_usuario = WebDriverWait(driver,30).until(EC.presence_of_element_located((By.NAME, "username")))
-barra_usuario.send_keys(random_name())
+barra_usuario.send_keys(nombre)
 
-passes = random_pass()
+
 time.sleep(1)
 barra_clave = WebDriverWait(driver,20).until(EC.presence_of_element_located((By.NAME, "password")))
 barra_clave.send_keys(passes)

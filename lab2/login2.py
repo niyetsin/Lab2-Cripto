@@ -8,11 +8,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import time
-import requests
-'''
-mail = requests.get("https://www.1secmail.com/api/v1/?action=genRandomMailbox&count=1")
-print(mail.json())
-'''
+
+
+usuarios = "prueba"
+claves = "clave"
+
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 options = Options()
 driver.switch_to.default_content()
@@ -22,16 +22,22 @@ userAgent = ua.random
 options.add_argument(f'user-agent={userAgent}')
 
 
-driver.get("http://ediciones.ucsh.cl/index.php/ForoEducacional/login/lostPassword")
+driver.get("https://forums.overclockers.co.uk")
 time.sleep(3)
 
 
-barra_usuario = WebDriverWait(driver,30).until(EC.presence_of_element_located((By.NAME, "email")))
-barra_usuario.send_keys('prueba')
+barra_usuario = WebDriverWait(driver,30).until(EC.presence_of_element_located((By.CLASS_NAME, "p-navgroup-link--logIn"))).click()
 
 
 time.sleep(1)
-driver.find_element(By.CLASS_NAME, "submit").click()
+barra_clave = WebDriverWait(driver,20).until(EC.presence_of_element_located((By.NAME, "login")))
+barra_clave.send_keys(usuarios)
+
 time.sleep(1)
+barra_clave = WebDriverWait(driver,20).until(EC.presence_of_element_located((By.NAME, "password")))
+barra_clave.send_keys(claves)
+
+time.sleep(1)
+driver.find_element(By.CLASS_NAME, "button--icon--login").click()
 
 driver.close()
