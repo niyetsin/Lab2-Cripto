@@ -7,7 +7,11 @@ Instalar Selenium:
 ```
 pip3 install selenium
 ```
+Instalar Webdriver manager:
 
+```
+pip3 install webdriver-manager
+```
 
 # Hito II
 
