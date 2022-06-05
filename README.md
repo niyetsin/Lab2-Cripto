@@ -26,15 +26,16 @@ En esta sección se realiza la automatización de inicio de sesión a una págin
 
 Para la realización de este hito se solicita la automatización de los siguientes procesos:
 
-  Creación de una cuenta
-  Inicio de Sesión
-  Restablecimiento de contraseña
-  Modificacion de contraseña
+  -Creación de una cuenta
+  -Inicio de Sesión
+  -Restablecimiento de contraseña
+  -Modificacion de contraseña
   
 Dentro de la carpeta Hito III se encontraran los archivos correspondientes a cada una de estas funciones. Por ejemplo creacion.py presenta la creacion de la cuenta en la pagina, etc...
 Esto debe llevarse a cabo en dos páginas seleccionadas de origen Chileno y otro no latinoamericano.
 Las páginas a elegir fueron:
-Chile: 
-España: https://offspringinc.es 
+
+  -Chile: http://ediciones.ucsh.cl/index.php/ForoEducacional/
+  -España: https://offspringinc.es 
 
 
