@@ -200,7 +200,6 @@ barra_usuario = WebDriverWait(driver,30).until(EC.presence_of_element_located((B
 barra_usuario.send_keys(clave_nueva)
 
 time.sleep(10)
-element = WebDriverWait(driver,20).until(EC.element_to_be_clickable((By.CLASS_NAME, "pkp_button  submitFormButton"))).click()
 
 print("LOGOUT")
 time.sleep(1)
