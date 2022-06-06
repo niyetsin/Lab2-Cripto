@@ -12,6 +12,16 @@ Instalar Webdriver manager:
 ```
 pip3 install webdriver-manager
 ```
+Instalar Fake User-Agent:
+
+```
+pip3 install fake-useragent
+```
+Instalar Webdriver manager:
+
+```
+pip3 install requests
+```
 
 Chrome:
 
