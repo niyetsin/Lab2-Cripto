@@ -2,6 +2,10 @@
 
 #Requerimientos:
 
+Instalar Python 3.X:
+
+https://www.python.org/downloads/windows/
+
 Instalar Selenium:
 
 ```
