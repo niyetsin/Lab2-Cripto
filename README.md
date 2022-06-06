@@ -22,6 +22,8 @@ https://www.google.com/intl/en-419/chrome/
 
 En esta sección se realiza la automatización de inicio de sesión a una página seleccionada anteriormente, para poder verificar si hubo alguna reparación despues de haberse involucrado a leaks de su base de datos. Dentro de la carpeta Hito II, se entontrará un archivo chequeo.py El cual contiene el programa para automatizar los inicios de sesión.
 
+Página utilizada para la realización de este hito: https://pagosyserviciosenlinea.usach.cl/user/login
+
 # Hito III
 
 Para la realización de este hito se solicita la automatización de los siguientes procesos:
